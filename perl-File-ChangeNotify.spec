@@ -6,7 +6,7 @@
 %define	pdir	File
 %define	pnam	ChangeNotify
 Summary:	File::ChangeNotify - Watch for changes to files, cross-platform style
-#Summary(pl.UTF-8):
+Summary(pl.UTF-8):	File::ChangeNotify - Obserwuje modyfikację plików
 Name:		perl-File-ChangeNotify
 Version:	0.07
 Release:	1
@@ -34,7 +34,9 @@ subclass that will work on your platform.
 Most of the documentation for this distro is in
 File::ChangeNotify::Watcher.
 
-# %description -l pl.UTF-8
+%description -l pl.UTF-8
+Moduł ten dostarcza API do tworzenia podklasy
+File::ChangeNotify::Watcher która może pracować na Twojej platformie.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
