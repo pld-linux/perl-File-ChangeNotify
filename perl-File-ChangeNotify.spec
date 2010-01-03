@@ -8,13 +8,13 @@
 Summary:	File::ChangeNotify - Watch for changes to files, cross-platform style
 Summary(pl.UTF-8):	File::ChangeNotify - Obserwuje modyfikację plików
 Name:		perl-File-ChangeNotify
-Version:	0.09
-Release:	2
+Version:	0.11
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/File/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	d9971bbf8925376ebf0eb3c3de6cdfff
+# Source0-md5:	169818a7d1afa0bc41259132268b6d95
 URL:		http://search.cpan.org/dist/File-ChangeNotify/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -23,11 +23,11 @@ BuildRequires:	perl(MooseX::Params::Validate) >= 0.08
 BuildRequires:	perl(MooseX::SemiAffordanceAccessor)
 BuildRequires:	perl-Class-MOP
 BuildRequires:	perl-Moose
+# not in PLD, yet
+#BuildRequires:	perl-Test-Without-Module
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define		_noautoreq	'perl(IO::KQueue)'
 
 %description
 This module provides an API for creating a File::ChangeNotify::Watcher
@@ -55,6 +55,12 @@ File::ChangeNotify::Watcher która może pracować na Twojej platformie.
 rm -rf $RPM_BUILD_ROOT
 
 ./Build install
+
+%ifnos bsd
+# BSD-specific watcher
+rm $RPM_BUILD_ROOT%{perl_vendorlib}/File/ChangeNotify/Watcher/KQueue.pm
+rm $RPM_BUILD_ROOT%{_mandir}/man3/File::ChangeNotify::Watcher::KQueue.3pm*
+%endif
 
 %clean
 rm -rf $RPM_BUILD_ROOT
