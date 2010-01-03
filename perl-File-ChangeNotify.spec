@@ -13,7 +13,8 @@ Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/File/%{pdir}-%{pnam}-%{version}.tar.gz
+#Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/%{pdir}/DROLSKY/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	169818a7d1afa0bc41259132268b6d95
 URL:		http://search.cpan.org/dist/File-ChangeNotify/
 BuildRequires:	perl-devel >= 1:5.8.0
