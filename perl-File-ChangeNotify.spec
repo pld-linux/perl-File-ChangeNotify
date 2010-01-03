@@ -9,7 +9,7 @@ Summary:	File::ChangeNotify - Watch for changes to files, cross-platform style
 Summary(pl.UTF-8):	File::ChangeNotify - Obserwuje modyfikację plików
 Name:		perl-File-ChangeNotify
 Version:	0.09
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -26,6 +26,8 @@ BuildRequires:	perl-Moose
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define		_noautoreq	'perl(IO::KQueue)'
 
 %description
 This module provides an API for creating a File::ChangeNotify::Watcher
