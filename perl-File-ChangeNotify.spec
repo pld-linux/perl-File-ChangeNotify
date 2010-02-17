@@ -8,14 +8,14 @@
 Summary:	File::ChangeNotify - Watch for changes to files, cross-platform style
 Summary(pl.UTF-8):	File::ChangeNotify - Obserwuje modyfikację plików
 Name:		perl-File-ChangeNotify
-Version:	0.11
+Version:	0.12
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 #Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/DROLSKY/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	169818a7d1afa0bc41259132268b6d95
+# Source0-md5:	cce39304fb2f12acc8c8b2c5a0876b26
 URL:		http://search.cpan.org/dist/File-ChangeNotify/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
