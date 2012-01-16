@@ -9,7 +9,7 @@ Summary:	File::ChangeNotify - Watch for changes to files, cross-platform style
 Summary(pl.UTF-8):	File::ChangeNotify - Obserwuje modyfikację plików
 Name:		perl-File-ChangeNotify
 Version:	0.20
-Release:	2
+Release:	3
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -22,7 +22,9 @@ BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
 BuildRequires:	perl(MooseX::Params::Validate) >= 0.08
 BuildRequires:	perl(MooseX::SemiAffordanceAccessor)
+BuildRequires:	perl-namespace-autoclean
 BuildRequires:	perl-Class-MOP
+BuildRequires:	perl-Linux-Inotify2
 BuildRequires:	perl-Moose
 # not in PLD, yet
 #BuildRequires:	perl-Test-Without-Module
