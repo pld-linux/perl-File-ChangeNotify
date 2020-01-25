@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests		# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define	pdir	File
 %define	pnam	ChangeNotify
 Summary:	File::ChangeNotify - Watch for changes to files, cross-platform style
